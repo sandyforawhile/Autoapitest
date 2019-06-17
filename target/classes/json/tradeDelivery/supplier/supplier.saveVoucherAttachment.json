@@ -1,0 +1,32 @@
+{
+  "attachmentBatchModel": {
+    "businessId": 0,
+    "businessType": 0,
+    "list": [
+      {
+        "businessId": 0,
+        "businessType": 0,
+        "editDate": "2019-03-13T10:34:56.733Z",
+        "editUserId": 0,
+        "editUserName": "string",
+        "id": 0,
+        "inDate": "2019-03-13T10:34:56.733Z",
+        "inUserId": 0,
+        "inUserName": "string",
+        "name": "string",
+        "sysStatus": 0,
+        "url": "string"
+      }
+    ]
+  },
+  "editDate": "2019-03-13T10:34:56.733Z",
+  "editUserId": 0,
+  "editUserName": "string",
+  "id": 0,
+  "inDate": "2019-03-13T10:34:56.733Z",
+  "inUserId": 0,
+  "inUserName": "string",
+  "sysStatus": 0,
+  "tradeDeliveryCode": "string",
+  "tradeFromJD": true
+}

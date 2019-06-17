@@ -1,0 +1,23 @@
+{
+  "areaId": 0,
+  "editDate": "2019-05-16T09:33:56.571Z",
+  "editUserId": 0,
+  "editUserName": "string",
+  "id": 0,
+  "inDate": "2019-05-16T09:33:56.571Z",
+  "inUserId": 0,
+  "inUserName": "string",
+  "organizationId": 0,
+  "projectId": 0,
+  "supplierId": 0,
+  "supplierSkuList": [
+    {
+      "quantity": 0,
+      "shoppingCartId": 0,
+      "supplierSkuId": 0,
+      "warehouseId": 0
+    }
+  ],
+  "sysStatus": 0,
+  "type": 0
+}

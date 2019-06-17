@@ -1,0 +1,20 @@
+{
+  "autoReceipt": true,
+  "detailModelList": [
+    {
+      "exchangeQuantity": 0,
+      "receiptQuantity": 1,
+      "returnQuantity": 0,
+      "supplierSkuId": 268
+    }
+  ],
+  "editDate": "2019-03-12T08:06:26.066Z",
+  "editUserId": 0,
+  "editUserName": "string",
+  "id": 0,
+  "inDate": "2019-03-12T08:06:26.066Z",
+  "inUserId": 0,
+  "inUserName": "string",
+  "sysStatus": 0,
+  "tradeDeliveryCode": "DR10915511715890083106228597"
+}
