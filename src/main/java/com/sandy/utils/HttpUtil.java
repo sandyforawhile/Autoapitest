@@ -144,7 +144,7 @@ public class HttpUtil {
             if (mapRespSplit.size() == 1)
                 logger.warning(domain + "." + business + "." + method + "方法解析错误，没有获取到所需的返回值。");
 
-            str = ReportUtil.InsertReport(domain, method, "", mapRespSplit.get("code"), mapRespSplit.get("description"), "POST");
+            str = ReportUtil.InsertReport(business, domain, method, mapRespSplit.get("code"), mapRespSplit.get("description"), "POST");
 
 
         } catch (Exception e) {
@@ -195,7 +195,7 @@ public class HttpUtil {
             mapRespSplit = HttpUtil.AnalysisResponse(response,mapRespNeed);
 
 
-            str = ReportUtil.InsertReport(domain, method, "", mapRespSplit.get("code"), mapRespSplit.get("description"), "GET");
+            str = ReportUtil.InsertReport(business, domain, method, mapRespSplit.get("code"), mapRespSplit.get("description"), "GET");
 
 
         } catch (Exception e) {

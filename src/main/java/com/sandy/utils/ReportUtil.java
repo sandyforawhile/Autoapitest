@@ -30,8 +30,10 @@ public class ReportUtil {
                     .append("<table>")
                     .append("<thead>")
                     .append("<tr>")
+                    .append("<th width='100px'>业务</th>")
                     .append("<th width='100px'>访问域</th>")
                     .append("<th width='200px'>请求方法</th>")
+                    .append("<th width='100px'>是否授权</th>")
                     .append("<th width='70px'>请求方式</th>")
                     .append("<th width='110px'>请求返回码</th>")
                     .append("<th>描述信息</th>")
@@ -47,17 +49,17 @@ public class ReportUtil {
         }
     }
 
-
-    public static String InsertReport(String domain, String method, String token, String code,String des ,String mode) {
+    public static String InsertReport(String business, String domain, String method, String code,String des ,String mode) {
 
 
         if(!code.isEmpty())
         {
             str.append("<tr>")
+                    .append("<td>").append(business).append("</td>")
                     .append("<td>").append(domain).append("</td>")
                     .append("<td>").append(method).append("</td>")
+                    .append("<td>").append(" ").append("</td>")
                     .append("<td>").append(mode).append("</td>");
-//            if (!code.equals("200")) {
             if (Integer.valueOf(code) >= 300){
                 str.append("<td style='color:red'>").append(code).append("</td>");
             } else {
