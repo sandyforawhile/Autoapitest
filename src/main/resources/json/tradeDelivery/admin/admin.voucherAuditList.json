@@ -1,0 +1,18 @@
+{
+  "orderBy": 0,
+  "pageNo": 0,
+  "pageSize": 0,
+  "pageStart": 0,
+  "projectJointId": 0,
+  "projectName": "string",
+  "queryTotal": true,
+  "reachVoucherAuditStatus": 0,
+  "reachVoucherStatus": 0,
+  "shipDateFrom": "2019-03-13T08:59:58.435Z",
+  "shipDateTo": "2019-03-13T08:59:58.435Z",
+  "sortAsc": "string",
+  "sortField": "string",
+  "supplierName": "string",
+  "tradeCode": "string",
+  "tradeDeliveryCode": "string"
+}

@@ -1,0 +1,21 @@
+{
+  "checkResult": 0,
+  "code": "string",
+  "editUserId": 0,
+  "editUserName": "string",
+  "id": 0,
+  "operationType": 0,
+  "pickupDate": "2019-03-14T01:41:01.952Z",
+  "pickupExpressName": "string",
+  "pickupPerson": "string",
+  "pickupPhone": "string",
+  "postAddress": "string",
+  "postAreaFullName": "string",
+  "postAreaId": 0,
+  "postPerson": "string",
+  "postPhone": "string",
+  "rejectApplyReason": "string",
+  "returnMode": 0,
+  "status": 0,
+  "tradeId": 0
+}

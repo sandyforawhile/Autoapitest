@@ -1,0 +1,10 @@
+{
+  "areaFullName": "string",
+  "areaId": 0,
+  "comment": "string",
+  "contactPerson": "string",
+  "contactPhone": "string",
+  "defaultAddress": true,
+  "deliveryAddress": "string",
+  "supplierId": 0
+}

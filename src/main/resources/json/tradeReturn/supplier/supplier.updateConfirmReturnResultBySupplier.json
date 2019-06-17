@@ -1,0 +1,12 @@
+{
+  "checkResult": 0,
+  "code": "string",
+  "editUserId": 0,
+  "editUserName": "string",
+  "id": 0,
+  "operationType": 0,
+  "rejectReturnReason": "string",
+  "returnMode": 0,
+  "status": 0,
+  "tradeId": 0
+}
