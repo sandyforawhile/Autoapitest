@@ -1,6 +1,5 @@
 package com.sandy;
 
-import com.sandy.action.RequestTokenAction;
 import org.junit.*;
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;

@@ -3,14 +3,13 @@ package com.sandy.utils;
 import com.alibaba.fastjson.JSONObject;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
-import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpRequestBase;
-import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.entity.StringEntity;
-import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.message.BasicNameValuePair;
 import javax.security.auth.login.LoginException;
 import java.io.BufferedReader;
@@ -38,6 +37,8 @@ public class HttpUtil {
     public static Logger logger = Logger.getLogger(LoginException.class.getName());
 
     public static String str;
+
+    public static CloseableHttpClient httpClient = HttpClientBuilder.create().build();
 
     public static void PackHttpReqBody(HttpPost httpPost, Map mapParam){
 
@@ -107,7 +108,9 @@ public class HttpUtil {
 
     public static String ExeHttpRequestByPost(String domain, String method, String token, String requestbody, String business) {
 
-        HttpClient httpClient = new DefaultHttpClient();
+
+//        CloseableHttpClient httpClient = HttpClientBuilder.create().build();
+//        HttpClient httpClient = new DefaultHttpClient();
 
         Map<String,String> mapHeader = new HashMap<>();
         Map<String, Object> mapReqBody;
@@ -158,7 +161,7 @@ public class HttpUtil {
 
         Map<String,String> mapRespSplit;
 
-        HttpClient httpClient = new DefaultHttpClient();
+//        HttpClient httpClient = new DefaultHttpClient();
         HttpPost httpPost = new HttpPost(oauthRequestUri);
 
         HttpUtil.PackHttpReqHeader(httpPost,map_header);
@@ -179,7 +182,8 @@ public class HttpUtil {
         mapRespNeed.put("code",null);
         mapRespNeed.put("description",null);
 
-        HttpClient httpClient = new DefaultHttpClient();
+//        HttpClient httpClient = new DefaultHttpClient();
+//        CloseableHttpClient httpClient = HttpClientBuilder.create().build();
 
         try {
 
