@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92e92ad8-2003-4462-89bc-900579988105" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sandy/utils/FileUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sandy/utils/FileUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sandy/utils/ReportUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sandy/utils/ReportUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/report/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sandy/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sandy/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sandy/TradeDetailTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sandy/TradeDetailTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sandy/utils/FileUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sandy/utils/FileUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sandy/utils/ReportUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sandy/utils/ReportUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.sandy.TradeTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.sandy.TradeTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.sandy.TradeTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.sandy.TradeTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/autoapitest.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/sandy/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/sandy/BaseTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/sandy/TradeDetailTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/sandy/TradeDetailTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -52,56 +40,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/sandy/TradeTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/sandy/TradeDetailTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/sandy/BaseTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="118" column="40" lean-forward="true" selection-start-line="118" selection-start-column="40" selection-end-line="118" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sandy/utils/ReportUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="80" column="23" selection-start-line="80" selection-start-column="23" selection-end-line="80" selection-end-column="23" />
+            <state relative-caret-position="331">
+              <caret line="89" column="78" selection-start-line="89" selection-start-column="78" selection-end-line="89" selection-end-column="78" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sandy/utils/FileUtil.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/sandy/BaseTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="66" selection-start-line="66" selection-end-line="66" />
+            <state relative-caret-position="1317">
+              <caret line="118" column="22" lean-forward="true" selection-start-line="118" selection-start-column="22" selection-end-line="118" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -187,10 +142,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/sandy/utils/HttpUtil.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/resources/report/index.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sandy/utils/ReportUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sandy/utils/FileUtil.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/sandy/TradeDetailTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/sandy/BaseTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sandy/utils/ReportUtil.java" />
       </list>
     </option>
   </component>
@@ -212,10 +167,9 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="130" />
-    <option name="y" value="41" />
-    <option name="width" value="1236" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1233" />
     <option name="height" value="777" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -249,6 +203,23 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="autoapitest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="autoapitest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="sandy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="autoapitest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="autoapitest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="sandy" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="autoapitest" type="b2602c69:ProjectViewProjectNode" />
@@ -297,7 +268,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560832248719" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560832833552" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -439,7 +410,7 @@
       <workItem from="1560480531044" duration="31066000" />
       <workItem from="1560745032473" duration="2276000" />
       <workItem from="1560754273491" duration="2389000" />
-      <workItem from="1560760085094" duration="14909000" />
+      <workItem from="1560760085094" duration="15613000" />
     </task>
     <task id="LOCAL-00001" summary="Create Local Resp">
       <created>1560751621954</created>
@@ -452,9 +423,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TradeTest - 2019.06.17 at 18h 13m 43s.xml">
-      <configuration name="TradeTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TradeTest - 2019.06.17 at 18h 16m 57s.xml">
       <configuration name="TradeTest" configurationId="JUnit" />
     </history-entry>
@@ -482,9 +450,12 @@
     <history-entry file="TradeTest - 2019.06.18 at 12h 21m 49s.xml">
       <configuration name="TradeTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TradeTest - 2019.06.18 at 12h 40m 21s.xml">
+      <configuration name="TradeTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="185474000" />
+    <option name="totallyTimeSpent" value="186178000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -496,10 +467,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1233" height="777" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1233" height="777" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.71313673" visible="true" weight="0.23761545" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.71313673" visible="true" weight="0.25944585" />
       <window_info id="Structure" order="1" sideWeight="0.28686327" side_tool="true" weight="0.12552302" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -508,7 +478,7 @@
       <window_info id="Favorites" order="6" sideWeight="0.5013123" side_tool="true" weight="0.43154246" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.15861027" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.35196376" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.35196376" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.17371601" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -516,7 +486,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32930514" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.20241691" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.20241691" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32779455" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -935,41 +905,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="6" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sandy/utils/FileUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="66" selection-start-line="66" selection-end-line="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/report/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="13" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/sandy/TradeTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sandy/utils/ReportUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="80" column="23" selection-start-line="80" selection-start-column="23" selection-end-line="80" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -1345,13 +1284,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/sandy/BaseTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/sandy/TradeTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="118" column="40" lean-forward="true" selection-start-line="118" selection-start-column="40" selection-end-line="118" selection-end-column="40" />
+        <state relative-caret-position="225">
+          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="6" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sandy/utils/FileUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/sandy/BaseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1317">
+          <caret line="118" column="22" lean-forward="true" selection-start-line="118" selection-start-column="22" selection-end-line="118" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sandy/utils/ReportUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="89" column="78" selection-start-line="89" selection-start-column="78" selection-end-line="89" selection-end-column="78" />
         </state>
       </provider>
     </entry>

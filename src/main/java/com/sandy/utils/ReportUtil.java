@@ -87,6 +87,7 @@ public class ReportUtil {
                     .append("<head>")
                     .append("<meta charset=\"utf-8\">")
                     .append("<title>").append("测试结果集").append("</title>")
+                    .append("<link rel='stylesheet' href='index.css'></link>")
                     .append("</head>")
                     .append("<body>");
         }
