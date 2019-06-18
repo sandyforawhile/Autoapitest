@@ -48,7 +48,7 @@ public class HttpUtil {
                 Iterator iterator = mapParam.entrySet().iterator();
                 while (iterator.hasNext()) {
                     Map.Entry<String, String> elem = (Map.Entry<String, String>) iterator.next();
-                    list.add(new BasicNameValuePair(elem.getKey(), elem.getValue()));
+                    list.add(new BasicNameValuePair(elem.getKey(), String.valueOf(elem.getValue())));
                 }
                 if (list.size() > 0) {
                     UrlEncodedFormEntity entity = new UrlEncodedFormEntity(list, "utf-8");

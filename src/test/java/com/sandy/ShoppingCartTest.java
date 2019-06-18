@@ -15,7 +15,7 @@ import java.security.NoSuchAlgorithmException;
 
 public class ShoppingCartTest extends BaseTest{
 
-    String business = "ShoppingCart";
+    String business = "shoppingCart";
 
     @Test
     public void ShoppingCartAuthSupplierTest() throws IOException, NoSuchAlgorithmException {
@@ -24,12 +24,12 @@ public class ShoppingCartTest extends BaseTest{
 
     @Test
     public void ShoppingCartAuthPurchaserTest() throws IOException, NoSuchAlgorithmException {
-        exeCase(3, business,"Supplier",true);
+        exeCase(3, business,"Purchaser",true);
     }
 
     @Test
     public void ShoppingCartAuthAdminTest() throws IOException, NoSuchAlgorithmException {
-        exeCase(5, business,"Supplier",true);
+        exeCase(5, business,"Admin",true);
     }
 
     @Test
@@ -39,17 +39,17 @@ public class ShoppingCartTest extends BaseTest{
 
     @Test
     public void ShoppingCartUnAuthPurchaserTest() throws IOException, NoSuchAlgorithmException {
-        exeCase(4, business,"Supplier",false);
+        exeCase(4, business,"Purchaser",false);
     }
 
     @Test
     public void ShoppingCartUnAuthAdminTest() throws IOException, NoSuchAlgorithmException {
-        exeCase(6, business,"Supplier",false);
+        exeCase(6, business,"Admin",false);
     }
 
     @Test
     public void ShoppingCartUnAuthTest() throws IOException, NoSuchAlgorithmException {
-        exeCase(7, business,"Admin",false);
+        exeCase(7, business,"Empty",false);
     }
 
 }

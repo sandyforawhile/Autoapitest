@@ -23,12 +23,12 @@ public class TradeDetailTest extends BaseTest {
 
     @Test
     public void TradeDetailAuthPurchaserTest() throws IOException, NoSuchAlgorithmException {
-        exeCase(3, business,"Supplier",true);
+        exeCase(3, business,"Purchaser",true);
     }
 
     @Test
     public void TradeDetailAuthAdminTest() throws IOException, NoSuchAlgorithmException {
-        exeCase(5, business,"Supplier",true);
+        exeCase(5, business,"Admin",true);
     }
 
     @Test
@@ -38,16 +38,16 @@ public class TradeDetailTest extends BaseTest {
 
     @Test
     public void TradeDetailUnAuthPurchaserTest() throws IOException, NoSuchAlgorithmException {
-        exeCase(4, business,"Supplier",false);
+        exeCase(4, business,"Purchaser",false);
     }
 
     @Test
     public void TradeDetailUnAuthAdminTest() throws IOException, NoSuchAlgorithmException {
-        exeCase(6, business,"Supplier",false);
+        exeCase(6, business,"Admin",false);
     }
 
     @Test
     public void TradeDetailUnAuthTest() throws IOException, NoSuchAlgorithmException {
-        exeCase(7, business,"Admin",false);
+        exeCase(7, business,"Empty",false);
     }
 }

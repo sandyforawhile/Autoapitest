@@ -41,6 +41,6 @@ public class TradeTest extends BaseTest {
 
     @Test
     public void TradeUnAuthTest() throws IOException, NoSuchAlgorithmException {
-        exeCase(7, business,"Admin",false);
+        exeCase(7, business,"Empty",false);
     }
 }

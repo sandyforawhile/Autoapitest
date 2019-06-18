@@ -24,12 +24,12 @@ public class TradeReturnTest extends BaseTest {
 
     @Test
     public void TradeReturnAuthPurchaserTest() throws IOException, NoSuchAlgorithmException {
-        exeCase(3, business,"Supplier",true);
+        exeCase(3, business,"Purchaser",true);
     }
 
     @Test
     public void TradeReturnAuthAdminTest() throws IOException, NoSuchAlgorithmException {
-        exeCase(5, business,"Supplier",true);
+        exeCase(5, business,"Admin",true);
     }
 
     @Test
@@ -39,16 +39,16 @@ public class TradeReturnTest extends BaseTest {
 
     @Test
     public void TradeReturnUnAuthPurchaserTest() throws IOException, NoSuchAlgorithmException {
-        exeCase(4, business,"Supplier",false);
+        exeCase(4, business,"Purchaser",false);
     }
 
     @Test
     public void TradeReturnUnAuthAdminTest() throws IOException, NoSuchAlgorithmException {
-        exeCase(6, business,"Supplier",false);
+        exeCase(6, business,"Admin",false);
     }
 
     @Test
     public void TradeReturnUnAuthTest() throws IOException, NoSuchAlgorithmException {
-        exeCase(7, business,"Admin",false);
+        exeCase(7, business,"Empty",false);
     }
 }
