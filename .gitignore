@@ -1,5 +1,13 @@
 #ignore this files#
 
+#Mac file
 .DS_Store
+
+#local report
 *.html
+
+#idea
+.idea
+
+#compile file
 /target/*

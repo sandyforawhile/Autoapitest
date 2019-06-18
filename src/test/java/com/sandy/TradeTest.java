@@ -8,7 +8,6 @@ import java.security.NoSuchAlgorithmException;
 public class TradeTest extends BaseTest {
 
     String business = "trade";
-    String token;
 
     @Test
     public void TradeAuthSupplierTest() throws IOException, NoSuchAlgorithmException {
@@ -40,4 +39,8 @@ public class TradeTest extends BaseTest {
         exeCase(6, business,"Admin",false);
     }
 
+    @Test
+    public void TradeUnAuthTest() throws IOException, NoSuchAlgorithmException {
+        exeCase(7, business,"Admin",false);
+    }
 }
