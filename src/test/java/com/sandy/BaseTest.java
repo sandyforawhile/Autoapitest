@@ -46,6 +46,7 @@ public class BaseTest<simpleDateFormat> {
     Object param = null;
     String token;
     Map<String, Object> map;
+    String authString;
 
     File fileReport;
     static File fileIndex;
@@ -63,9 +64,11 @@ public class BaseTest<simpleDateFormat> {
 
         if(authFlag == true){
             fileName = str + user.toUpperCase() + "_" + business.toUpperCase() + "_" + "已授权";
+            authString = "是";
         }
         else {
             fileName = str + user.toUpperCase() + "_" + business.toUpperCase() + "_" + "未授权";
+            authString = "否";
         }
 
         //生成测试报告文件
@@ -95,13 +98,13 @@ public class BaseTest<simpleDateFormat> {
                 }
 
                 if (mode.equals("post")) {
-                    response = HttpUtil.ExeHttpRequestByPost(domain, method, token, content, business);
+                    response = HttpUtil.ExeHttpRequestByPost(domain, method, token, content, business,authString);
                 } else if (mode.equals("get")) {
                     map = JsonUtil.Json2Map(content);
                     if (map != null) {
                         param = map.get("param");
                     }
-                    response = HttpUtil.ExeHttpRequestByGet(domain, method, token, param, business);
+                    response = HttpUtil.ExeHttpRequestByGet(domain, method, token, param, business,authString);
                 } else {
                     logger.warning("HTTP请求方式不正确：" + method);
                 }

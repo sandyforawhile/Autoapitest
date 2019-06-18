@@ -106,11 +106,8 @@ public class HttpUtil {
         return mapRespSplit;
     }
 
-    public static String ExeHttpRequestByPost(String domain, String method, String token, String requestbody, String business) {
+    public static String ExeHttpRequestByPost(String domain, String method, String token, String requestbody, String business, String authString) {
 
-
-//        CloseableHttpClient httpClient = HttpClientBuilder.create().build();
-//        HttpClient httpClient = new DefaultHttpClient();
 
         Map<String,String> mapHeader = new HashMap<>();
         Map<String, Object> mapReqBody;
@@ -147,7 +144,7 @@ public class HttpUtil {
             if (mapRespSplit.size() == 1)
                 logger.warning(domain + "." + business + "." + method + "方法解析错误，没有获取到所需的返回值。");
 
-            str = ReportUtil.InsertReport(business, domain, method, mapRespSplit.get("code"), mapRespSplit.get("description"), "POST");
+            str = ReportUtil.InsertReport(business, domain, method, mapRespSplit.get("code"), mapRespSplit.get("description"),"POST", authString);
 
 
         } catch (Exception e) {
@@ -161,7 +158,6 @@ public class HttpUtil {
 
         Map<String,String> mapRespSplit;
 
-//        HttpClient httpClient = new DefaultHttpClient();
         HttpPost httpPost = new HttpPost(oauthRequestUri);
 
         HttpUtil.PackHttpReqHeader(httpPost,map_header);
@@ -174,7 +170,7 @@ public class HttpUtil {
         return mapRespSplit;
     }
 
-    public static String ExeHttpRequestByGet(String domain, String method, String token, Object object, String business) {
+    public static String ExeHttpRequestByGet(String domain, String method, String token, Object object, String business, String authString) {
 
         Map<String,String> mapHeader = new HashMap<>();
         Map<String, String> mapRespSplit;
@@ -182,8 +178,6 @@ public class HttpUtil {
         mapRespNeed.put("code",null);
         mapRespNeed.put("description",null);
 
-//        HttpClient httpClient = new DefaultHttpClient();
-//        CloseableHttpClient httpClient = HttpClientBuilder.create().build();
 
         try {
 
@@ -199,7 +193,7 @@ public class HttpUtil {
             mapRespSplit = HttpUtil.AnalysisResponse(response,mapRespNeed);
 
 
-            str = ReportUtil.InsertReport(business, domain, method, mapRespSplit.get("code"), mapRespSplit.get("description"), "GET");
+            str = ReportUtil.InsertReport(business, domain, method, mapRespSplit.get("code"), mapRespSplit.get("description"), "GET", authString);
 
 
         } catch (Exception e) {

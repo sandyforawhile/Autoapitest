@@ -49,7 +49,7 @@ public class ReportUtil {
         }
     }
 
-    public static String InsertReport(String business, String domain, String method, String code,String des ,String mode) {
+    public static String InsertReport(String business, String domain, String method, String code,String des ,String mode, String authFlag) {
 
 
         if(!code.isEmpty())
@@ -58,7 +58,7 @@ public class ReportUtil {
                     .append("<td>").append(business).append("</td>")
                     .append("<td>").append(domain).append("</td>")
                     .append("<td>").append(method).append("</td>")
-                    .append("<td>").append(" ").append("</td>")
+                    .append("<td>").append(authFlag).append("</td>")
                     .append("<td>").append(mode).append("</td>");
             if (Integer.valueOf(code) >= 300){
                 str.append("<td style='color:red'>").append(code).append("</td>");
