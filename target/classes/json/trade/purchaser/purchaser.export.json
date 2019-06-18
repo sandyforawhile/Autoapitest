@@ -1,3 +1,0 @@
-{
-  "filter": "{\"pageSize\":20,\"pageNo\":1,\"queryTotal\":true,\"code\":null,\"status\":null,\"auditStatus\":null,\"organizationName\":null,\"projectName\":null,\"supplierName\":null,\"receivingAreaId\":null,\"type\":null,\"returnProductStatus\":null,\"startOrderDate\":\"2019-05-04T16:00:00.000Z\",\"endOrderDate\":\"2019-05-12T16:00:00.000Z\",\"startSkuAmount\":null,\"endSkuAmount\":null,\"freezeStatus\":null,\"projectJointId\":281165,\"yzwSpuName\":null,\"yzwSpuCode\":null,\"abort\":null,\"thirdCode\":null,\"warehouseType\":null,\"sysStatus\":null,\"supplierSkuCode\":null}"
-}
