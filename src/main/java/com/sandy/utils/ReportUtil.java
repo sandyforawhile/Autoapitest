@@ -77,4 +77,24 @@ public class ReportUtil {
     public static void GeneReport(File file, String str) throws IOException {
         FileUtil.WriteFile(file, str);
     }
+
+    public static void PackIndex(File fileIndex) throws IOException {
+
+        StringBuffer str = new StringBuffer();
+
+        if(fileIndex.length() == 0){
+            str.append("<html>")
+                    .append("<head>")
+                    .append("<meta charset=\"utf-8\">")
+                    .append("<title>").append("测试结果集").append("</title>")
+                    .append("</head>")
+                    .append("<body>");
+        }
+        else {
+            str.append("</body>")
+                    .append("</html>");
+        }
+
+        FileUtil.WriteFile(fileIndex, str.toString());
+    }
 }

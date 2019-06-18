@@ -3,11 +3,15 @@ package com.sandy;
 import com.sandy.action.RequestTokenAction;
 import com.sandy.action.TestCaseAction;
 import com.sandy.utils.*;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
 
 import javax.security.auth.login.LoginException;
 import java.io.File;
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
@@ -21,7 +25,7 @@ import java.util.logging.Logger;
  * @Description: //TODO
  */
 
-public class BaseTest {
+public class BaseTest<simpleDateFormat> {
 
     final String JSON_CASE_FILE_PATH = "src/main/resources/json/";
     final String PROPERTIES_REQUEST_METHOD_FILE_PATH = "/common/requestMethod.properties";
@@ -44,17 +48,24 @@ public class BaseTest {
     Map<String, Object> map;
 
     File fileReport;
+    static File fileIndex;
     String fileName;
+
+    SimpleDateFormat simpleDateFormat;
 
     public void exeCase(int tokenIndex, String business, String user, boolean authFlag) throws IOException, NoSuchAlgorithmException {
 
         token = RequestTokenAction.getToken(accountProp.getProperty(testcases.get(tokenIndex)));
 
+        simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
+        Date date = new Date();
+        String str = simpleDateFormat.format(date) + "_";
+
         if(authFlag == true){
-            fileName = user.toUpperCase() + "_" + business.toUpperCase() + "_" + "已授权";
+            fileName = str + user.toUpperCase() + "_" + business.toUpperCase() + "_" + "已授权";
         }
         else {
-            fileName = user.toUpperCase() + "_" + business.toUpperCase() + "_" + "未授权";
+            fileName = str + user.toUpperCase() + "_" + business.toUpperCase() + "_" + "未授权";
         }
 
         //生成测试报告文件
@@ -98,7 +109,19 @@ public class BaseTest {
             }
             ReportUtil.PackReport(fileReport, "");
             ReportUtil.GeneReport(fileReport, response);
+            FileUtil.WriteFile(fileIndex,"<a href=\""+fileName+"_接口测试报告.html\">"+fileName+"_接口测试报告.html</a><br>");
         }
+    }
+
+    @BeforeClass
+    public static void Init() throws IOException {
+        fileIndex = FileUtil.CreateFile("report/", "index", "html");
+        ReportUtil.PackIndex(fileIndex);
+    }
+
+    @AfterClass
+    public static void finish() throws IOException {
+        ReportUtil.PackIndex(fileIndex);
     }
 
 }
