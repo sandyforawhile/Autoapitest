@@ -113,7 +113,10 @@ public class BaseTest {
             ReportUtil.InsertReport(fileReport);
             ReportUtil.PackReport(fileReport, "");
             ReportUtil.InsertReport(fileIndex,"<a href=\""+fileName+"_接口测试报告.html\">"+fileName+"_接口测试报告.html</a><br>");
+
         }
+
+        fileList.clear();
     }
 
     @BeforeClass
