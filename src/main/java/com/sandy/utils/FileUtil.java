@@ -59,16 +59,9 @@ public class FileUtil {
     //新建文件
     public static File CreateFile(String filepath, String filename, String suffix){
 
-//        SimpleDateFormat simpleDateFormat;
-//        simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
-//        Date date = new Date();
-//        String str = simpleDateFormat.format(date) + "_";
         File file = null;
 
-
         file = new File(FILE_PATH  + filepath + filename + "." + suffix);
-
-
 
         try {
             if(file.exists()){

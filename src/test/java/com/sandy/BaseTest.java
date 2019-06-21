@@ -25,7 +25,7 @@ import java.util.logging.Logger;
  * @Description: //TODO
  */
 
-public class BaseTest<simpleDateFormat> {
+public class BaseTest {
 
     final String JSON_CASE_FILE_PATH = "src/main/resources/json/";
     final String PROPERTIES_REQUEST_METHOD_FILE_PATH = "/common/requestMethod.properties";
@@ -73,7 +73,6 @@ public class BaseTest<simpleDateFormat> {
 
         //生成测试报告文件
         fileReport = FileUtil.CreateFile("report/", fileName + "_接口测试报告", "html");
-
         ReportUtil.PackReport(fileReport, fileName);
 
         //读取用例文件
@@ -110,9 +109,10 @@ public class BaseTest<simpleDateFormat> {
                 }
 
             }
+//            ReportUtil.InsertReport(fileReport, response);
+            ReportUtil.InsertReport(fileReport);
             ReportUtil.PackReport(fileReport, "");
-            ReportUtil.GeneReport(fileReport, response);
-            FileUtil.WriteFile(fileIndex,"<a href=\""+fileName+"_接口测试报告.html\">"+fileName+"_接口测试报告.html</a><br>");
+            ReportUtil.InsertReport(fileIndex,"<a href=\""+fileName+"_接口测试报告.html\">"+fileName+"_接口测试报告.html</a><br>");
         }
     }
 

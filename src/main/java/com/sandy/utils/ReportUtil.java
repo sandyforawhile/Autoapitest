@@ -13,9 +13,11 @@ import java.io.IOException;
 
 public class ReportUtil {
 
-    public static StringBuffer str = new StringBuffer();
+    static StringBuffer stringBuffer = new StringBuffer();
 
-    public static void PackReport(File file,String title) {
+    public static void PackReport(File file,String title) throws IOException {
+
+        StringBuffer str = new StringBuffer();
 
         if(file.length() == 0){
             str.delete(0,str.length());
@@ -47,35 +49,33 @@ public class ReportUtil {
                     .append("</body>")
                     .append("</html>");
         }
+
+        FileUtil.WriteFile(file, str.toString());
     }
 
-    public static String InsertReport(String business, String domain, String method, String code,String des ,String mode, String authFlag) {
-
+    public static String GeneCaseReport(String business, String domain, String method, String code,String des ,String mode, String authFlag) {
 
         if(!code.isEmpty())
         {
-            str.append("<tr>")
+            stringBuffer.append("<tr>")
                     .append("<td>").append(business).append("</td>")
                     .append("<td>").append(domain).append("</td>")
                     .append("<td>").append(method).append("</td>")
                     .append("<td>").append(authFlag).append("</td>")
                     .append("<td>").append(mode).append("</td>");
             if (Integer.valueOf(code) >= 300){
-                str.append("<td style='color:red'>").append(code).append("</td>");
+                stringBuffer.append("<td style='color:red'>").append(code).append("</td>");
             } else {
-                str.append("<td style='color:green'>").append(code).append("</td>");
+                stringBuffer.append("<td style='color:green'>").append(code).append("</td>");
             }
-
-            str.append("<td>").append(des).append("</td>")
+            stringBuffer.append("<td>").append(des).append("</td>")
                     .append("</tr>");
         }
-
-        return str.toString();
-
+        return stringBuffer.toString();
     }
 
-    public static void GeneReport(File file, String str) throws IOException {
-        FileUtil.WriteFile(file, str);
+    public static void InsertReport(File file, String strContext) throws IOException {
+        FileUtil.WriteFile(file, strContext);
     }
 
     public static void PackIndex(File fileIndex) throws IOException {
@@ -97,5 +97,10 @@ public class ReportUtil {
         }
 
         FileUtil.WriteFile(fileIndex, str.toString());
+    }
+
+    public static void InsertReport(File file) throws IOException {
+        FileUtil.WriteFile(file, stringBuffer.toString());
+        stringBuffer.setLength(0);
     }
 }

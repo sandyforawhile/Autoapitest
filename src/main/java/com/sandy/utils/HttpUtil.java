@@ -144,13 +144,11 @@ public class HttpUtil {
             if (mapRespSplit.size() == 1)
                 logger.warning(domain + "." + business + "." + method + "方法解析错误，没有获取到所需的返回值。");
 
-            str = ReportUtil.InsertReport(business, domain, method, mapRespSplit.get("code"), mapRespSplit.get("description"),"POST", authString);
-
+            str = ReportUtil.GeneCaseReport(business, domain, method, mapRespSplit.get("code"), mapRespSplit.get("description"),"POST", authString);
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         return str;
     }
 
@@ -178,7 +176,6 @@ public class HttpUtil {
         mapRespNeed.put("code",null);
         mapRespNeed.put("description",null);
 
-
         try {
 
             HttpGet httpGet = new HttpGet(URI + domain + "/" + business + "/" + method + "/" + object);
@@ -188,13 +185,10 @@ public class HttpUtil {
                 mapHeader.put("Authorization", token);
             }
             HttpUtil.PackHttpReqHeader(httpGet, mapHeader);
-
             HttpResponse response = httpClient.execute(httpGet);
             mapRespSplit = HttpUtil.AnalysisResponse(response,mapRespNeed);
 
-
-            str = ReportUtil.InsertReport(business, domain, method, mapRespSplit.get("code"), mapRespSplit.get("description"), "GET", authString);
-
+            str = ReportUtil.GeneCaseReport(business, domain, method, mapRespSplit.get("code"), mapRespSplit.get("description"), "GET", authString);
 
         } catch (Exception e) {
             e.printStackTrace();
