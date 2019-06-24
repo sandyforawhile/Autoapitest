@@ -20,7 +20,7 @@ public class FileUtil {
     public static final String FILE_PATH = "src/main/resources/";
 
     //读取文件
-    public static String ReadFile(String filename){
+    public static String readFile(String filename){
 
         int len=0;
         StringBuffer str = new StringBuffer();
@@ -49,7 +49,7 @@ public class FileUtil {
     }
 
     //写文件
-    public static void WriteFile(File filename, String context) throws IOException {
+    public static void writeFile(File filename, String context) throws IOException {
         FileWriter fw = new FileWriter(filename, true);
         BufferedWriter bw = new BufferedWriter(fw);
         bw.write(context);
@@ -57,7 +57,7 @@ public class FileUtil {
     }
 
     //新建文件
-    public static File CreateFile(String filepath, String filename, String suffix){
+    public static File createFile(String filepath, String filename, String suffix){
 
         File file = null;
 
@@ -76,7 +76,7 @@ public class FileUtil {
     }
 
     //递归获取路径下全部文件名
-    public static List<File> GetAllFileName(String filepath){
+    public static List<File> getAllFileName(String filepath){
 
         File file = new File(filepath);
         File[] files = file.listFiles();
@@ -89,7 +89,7 @@ public class FileUtil {
                 fileList.add(f);
             }
             else if(f.isDirectory()){
-                GetAllFileName(f.getAbsolutePath());
+                getAllFileName(f.getAbsolutePath());
             }
         }
 

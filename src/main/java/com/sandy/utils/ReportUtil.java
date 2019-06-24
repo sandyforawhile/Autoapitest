@@ -15,7 +15,7 @@ public class ReportUtil {
 
     static StringBuffer stringBuffer = new StringBuffer();
 
-    public static void PackReport(File file,String title) throws IOException {
+    public static void packReport(File file,String title) throws IOException {
 
         StringBuffer str = new StringBuffer();
 
@@ -50,10 +50,10 @@ public class ReportUtil {
                     .append("</html>");
         }
 
-        FileUtil.WriteFile(file, str.toString());
+        FileUtil.writeFile(file, str.toString());
     }
 
-    public static String GeneCaseReport(String business, String domain, String method, String code,String des ,String mode, String authFlag) {
+    public static String geneCaseReport(String business, String domain, String method, String code,String des ,String mode, String authFlag) {
 
         if(!code.isEmpty())
         {
@@ -74,11 +74,11 @@ public class ReportUtil {
         return stringBuffer.toString();
     }
 
-    public static void InsertReport(File file, String strContext) throws IOException {
-        FileUtil.WriteFile(file, strContext);
+    public static void insertReport(File file, String strContext) throws IOException {
+        FileUtil.writeFile(file, strContext);
     }
 
-    public static void PackIndex(File fileIndex) throws IOException {
+    public static void packIndex(File fileIndex) throws IOException {
 
         StringBuffer str = new StringBuffer();
 
@@ -96,11 +96,11 @@ public class ReportUtil {
                     .append("</html>");
         }
 
-        FileUtil.WriteFile(fileIndex, str.toString());
+        FileUtil.writeFile(fileIndex, str.toString());
     }
 
-    public static void InsertReport(File file) throws IOException {
-        FileUtil.WriteFile(file, stringBuffer.toString());
+    public static void insertReport(File file) throws IOException {
+        FileUtil.writeFile(file, stringBuffer.toString());
         stringBuffer.setLength(0);
     }
 }

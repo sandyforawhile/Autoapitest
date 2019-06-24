@@ -31,8 +31,8 @@ public class BaseTest {
     final String PROPERTIES_REQUEST_METHOD_FILE_PATH = "/common/requestMethod.properties";
     final String PROPERTIES_ACCOUNT_FILE_PATH = "/common/account.properties";
 
-    Properties accountProp = PropertiesUtil.PropLoader(PROPERTIES_ACCOUNT_FILE_PATH);
-    Properties modeProp = PropertiesUtil.PropLoader(PROPERTIES_REQUEST_METHOD_FILE_PATH);
+    Properties accountProp = PropertiesUtil.propLoader(PROPERTIES_ACCOUNT_FILE_PATH);
+    Properties modeProp = PropertiesUtil.propLoader(PROPERTIES_REQUEST_METHOD_FILE_PATH);
     Logger logger = Logger.getLogger(LoginException.class.getName());
 
     //装载默认测试场景
@@ -72,11 +72,11 @@ public class BaseTest {
         }
 
         //生成测试报告文件
-        fileReport = FileUtil.CreateFile("report/", fileName + "_接口测试报告", "html");
-        ReportUtil.PackReport(fileReport, fileName);
+        fileReport = FileUtil.createFile("report/", fileName + "_接口测试报告", "html");
+        ReportUtil.packReport(fileReport, fileName);
 
         //读取用例文件
-        List<File> fileList = FileUtil.GetAllFileName(JSON_CASE_FILE_PATH + business);
+        List<File> fileList = FileUtil.getAllFileName(JSON_CASE_FILE_PATH + business);
 
 
         if (fileList.size() > 0) {
@@ -88,7 +88,7 @@ public class BaseTest {
 
                 domain = fileInfo[0];
                 method = fileInfo[1];
-                content = FileUtil.ReadFile(fileCase.getAbsolutePath());
+                content = FileUtil.readFile(fileCase.getAbsolutePath());
 
                 if (modeProp.getProperty(domain + "." + method) == null) {
                     logger.warning("HTTP请求方式未设置：" + method);
@@ -97,22 +97,21 @@ public class BaseTest {
                 }
 
                 if (mode.equals("post")) {
-                    response = HttpUtil.ExeHttpRequestByPost(domain, method, token, content, business,authString);
+                    response = HttpUtil.exeHttpRequestByPost(domain, method, token, content, business,authString);
                 } else if (mode.equals("get")) {
-                    map = JsonUtil.Json2Map(content);
+                    map = JsonUtil.json2Map(content);
                     if (map != null) {
                         param = map.get("param");
                     }
-                    response = HttpUtil.ExeHttpRequestByGet(domain, method, token, param, business,authString);
+                    response = HttpUtil.exeHttpRequestByGet(domain, method, token, param, business,authString);
                 } else {
                     logger.warning("HTTP请求方式不正确：" + method);
                 }
 
             }
-//            ReportUtil.InsertReport(fileReport, response);
-            ReportUtil.InsertReport(fileReport);
-            ReportUtil.PackReport(fileReport, "");
-            ReportUtil.InsertReport(fileIndex,"<a href=\""+fileName+"_接口测试报告.html\">"+fileName+"_接口测试报告.html</a><br>");
+            ReportUtil.insertReport(fileReport);
+            ReportUtil.packReport(fileReport, "");
+            ReportUtil.insertReport(fileIndex,"<a href=\""+fileName+"_接口测试报告.html\">"+fileName+"_接口测试报告.html</a><br>");
 
         }
 
@@ -120,14 +119,14 @@ public class BaseTest {
     }
 
     @BeforeClass
-    public static void Init() throws IOException {
-        fileIndex = FileUtil.CreateFile("report/", "index", "html");
-        ReportUtil.PackIndex(fileIndex);
+    public static void nit() throws IOException {
+        fileIndex = FileUtil.createFile("report/", "index", "html");
+        ReportUtil.packIndex(fileIndex);
     }
 
     @AfterClass
     public static void finish() throws IOException {
-        ReportUtil.PackIndex(fileIndex);
+        ReportUtil.packIndex(fileIndex);
     }
 
 }

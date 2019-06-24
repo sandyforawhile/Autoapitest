@@ -40,7 +40,7 @@ public class HttpUtil {
 
     public static CloseableHttpClient httpClient = HttpClientBuilder.create().build();
 
-    public static void PackHttpReqBody(HttpPost httpPost, Map mapParam){
+    public static void packHttpReqBody(HttpPost httpPost, Map mapParam){
 
         try {
             List<NameValuePair> list = new ArrayList();
@@ -60,7 +60,7 @@ public class HttpUtil {
         }
     }
 
-    public static void PackHttpReqHeader(HttpRequestBase httpReq, Map mapHeader) {
+    public static void packHttpReqHeader(HttpRequestBase httpReq, Map mapHeader) {
 
         Iterator iterator = mapHeader.entrySet().iterator();
         while (iterator.hasNext()) {
@@ -69,7 +69,7 @@ public class HttpUtil {
         }
     }
 
-    public static Map<String, String> AnalysisResponse(HttpResponse response, Map mapResp) throws IOException {
+    public static Map<String, String> analysisResponse(HttpResponse response, Map mapResp) throws IOException {
 
         Map<String,String> mapRespSplit = new HashMap<>();
 
@@ -106,7 +106,7 @@ public class HttpUtil {
         return mapRespSplit;
     }
 
-    public static String ExeHttpRequestByPost(String domain, String method, String token, String requestbody, String business, String authString) {
+    public static String exeHttpRequestByPost(String domain, String method, String token, String requestbody, String business, String authString) {
 
 
         Map<String,String> mapHeader = new HashMap<>();
@@ -123,15 +123,14 @@ public class HttpUtil {
 
             if (method.equals("export")) {
                 mapHeader.put("Content-Type", "application/x-www-form-urlencoded");
-                mapReqBody = JsonUtil.Json2Map(requestbody);
-                HttpUtil.PackHttpReqHeader(httpPost, mapHeader);
-                HttpUtil.PackHttpReqBody(httpPost, mapReqBody);
+                mapReqBody = JsonUtil.json2Map(requestbody);
+                HttpUtil.packHttpReqHeader(httpPost, mapHeader);
+                HttpUtil.packHttpReqBody(httpPost, mapReqBody);
             } else {
                 mapHeader.put("Content-Type", "application/json");
                 if (token != null) {
                     mapHeader.put("Authorization", token);
-                }
-                HttpUtil.PackHttpReqHeader(httpPost, mapHeader);
+                }packHttpReqHeader(httpPost, mapHeader);
                 if (requestbody != null && !requestbody.equals("")) {
                     StringEntity stringEntity = new StringEntity(requestbody);
                     httpPost.setEntity(stringEntity);
@@ -139,12 +138,12 @@ public class HttpUtil {
             }
 
             HttpResponse response = httpClient.execute(httpPost);
-            mapRespSplit = HttpUtil.AnalysisResponse(response,mapRespNeed);
+            mapRespSplit = HttpUtil.analysisResponse(response,mapRespNeed);
 
             if (mapRespSplit.size() == 1)
                 logger.warning(domain + "." + business + "." + method + "方法解析错误，没有获取到所需的返回值。");
 
-            str = ReportUtil.GeneCaseReport(business, domain, method, mapRespSplit.get("code"), mapRespSplit.get("description"),"POST", authString);
+            str = ReportUtil.geneCaseReport(business, domain, method, mapRespSplit.get("code"), mapRespSplit.get("description"),"POST", authString);
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -152,23 +151,23 @@ public class HttpUtil {
         return str;
     }
 
-    public static Map ExeHttpRequestByPost(String oauthRequestUri, Map map_header, Map map_param, Map mapRespNeed) throws IOException {
+    public static Map exeHttpRequestByPost(String oauthRequestUri, Map map_header, Map map_param, Map mapRespNeed) throws IOException {
 
         Map<String,String> mapRespSplit;
 
         HttpPost httpPost = new HttpPost(oauthRequestUri);
 
-        HttpUtil.PackHttpReqHeader(httpPost,map_header);
-        HttpUtil.PackHttpReqBody(httpPost,map_param);
+        HttpUtil.packHttpReqHeader(httpPost,map_header);
+        HttpUtil.packHttpReqBody(httpPost,map_param);
 
         HttpResponse response = httpClient.execute(httpPost);
 
-        mapRespSplit = HttpUtil.AnalysisResponse(response,mapRespNeed);
+        mapRespSplit = HttpUtil.analysisResponse(response,mapRespNeed);
 
         return mapRespSplit;
     }
 
-    public static String ExeHttpRequestByGet(String domain, String method, String token, Object object, String business, String authString) {
+    public static String exeHttpRequestByGet(String domain, String method, String token, Object object, String business, String authString) {
 
         Map<String,String> mapHeader = new HashMap<>();
         Map<String, String> mapRespSplit;
@@ -184,11 +183,11 @@ public class HttpUtil {
             if(token != null){
                 mapHeader.put("Authorization", token);
             }
-            HttpUtil.PackHttpReqHeader(httpGet, mapHeader);
+            HttpUtil.packHttpReqHeader(httpGet, mapHeader);
             HttpResponse response = httpClient.execute(httpGet);
-            mapRespSplit = HttpUtil.AnalysisResponse(response,mapRespNeed);
+            mapRespSplit = HttpUtil.analysisResponse(response,mapRespNeed);
 
-            str = ReportUtil.GeneCaseReport(business, domain, method, mapRespSplit.get("code"), mapRespSplit.get("description"), "GET", authString);
+            str = ReportUtil.geneCaseReport(business, domain, method, mapRespSplit.get("code"), mapRespSplit.get("description"), "GET", authString);
 
         } catch (Exception e) {
             e.printStackTrace();

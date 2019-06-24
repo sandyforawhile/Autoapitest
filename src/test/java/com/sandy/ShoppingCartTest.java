@@ -18,37 +18,37 @@ public class ShoppingCartTest extends BaseTest{
     String business = "shoppingCart";
 
     @Test
-    public void ShoppingCartAuthSupplierTest() throws IOException, NoSuchAlgorithmException {
+    public void shoppingCartAuthSupplierTest() throws IOException, NoSuchAlgorithmException {
         exeCase(1, business,"Supplier",true);
     }
 
     @Test
-    public void ShoppingCartAuthPurchaserTest() throws IOException, NoSuchAlgorithmException {
+    public void shoppingCartAuthPurchaserTest() throws IOException, NoSuchAlgorithmException {
         exeCase(3, business,"Purchaser",true);
     }
 
     @Test
-    public void ShoppingCartAuthAdminTest() throws IOException, NoSuchAlgorithmException {
+    public void shoppingCartAuthAdminTest() throws IOException, NoSuchAlgorithmException {
         exeCase(5, business,"Admin",true);
     }
 
     @Test
-    public void ShoppingCartUnAuthSupplierTest() throws IOException, NoSuchAlgorithmException {
+    public void shoppingCartUnAuthSupplierTest() throws IOException, NoSuchAlgorithmException {
         exeCase(2, business,"Supplier",false);
     }
 
     @Test
-    public void ShoppingCartUnAuthPurchaserTest() throws IOException, NoSuchAlgorithmException {
+    public void shoppingCartUnAuthPurchaserTest() throws IOException, NoSuchAlgorithmException {
         exeCase(4, business,"Purchaser",false);
     }
 
     @Test
-    public void ShoppingCartUnAuthAdminTest() throws IOException, NoSuchAlgorithmException {
+    public void shoppingCartUnAuthAdminTest() throws IOException, NoSuchAlgorithmException {
         exeCase(6, business,"Admin",false);
     }
 
     @Test
-    public void ShoppingCartUnAuthTest() throws IOException, NoSuchAlgorithmException {
+    public void shoppingCartUnAuthTest() throws IOException, NoSuchAlgorithmException {
         exeCase(7, business,"Empty",false);
     }
 

@@ -18,37 +18,37 @@ public class TradeReturnTest extends BaseTest {
     String business = "tradeReturn";
 
     @Test
-    public void TradeReturnAuthSupplierTest() throws IOException, NoSuchAlgorithmException {
+    public void tradeReturnAuthSupplierTest() throws IOException, NoSuchAlgorithmException {
         exeCase(1, business,"Supplier",true);
     }
 
     @Test
-    public void TradeReturnAuthPurchaserTest() throws IOException, NoSuchAlgorithmException {
+    public void tradeReturnAuthPurchaserTest() throws IOException, NoSuchAlgorithmException {
         exeCase(3, business,"Purchaser",true);
     }
 
     @Test
-    public void TradeReturnAuthAdminTest() throws IOException, NoSuchAlgorithmException {
+    public void tradeReturnAuthAdminTest() throws IOException, NoSuchAlgorithmException {
         exeCase(5, business,"Admin",true);
     }
 
     @Test
-    public void TradeReturnUnAuthSupplierTest() throws IOException, NoSuchAlgorithmException {
+    public void tradeReturnUnAuthSupplierTest() throws IOException, NoSuchAlgorithmException {
         exeCase(2, business,"Supplier",false);
     }
 
     @Test
-    public void TradeReturnUnAuthPurchaserTest() throws IOException, NoSuchAlgorithmException {
+    public void tradeReturnUnAuthPurchaserTest() throws IOException, NoSuchAlgorithmException {
         exeCase(4, business,"Purchaser",false);
     }
 
     @Test
-    public void TradeReturnUnAuthAdminTest() throws IOException, NoSuchAlgorithmException {
+    public void tradeReturnUnAuthAdminTest() throws IOException, NoSuchAlgorithmException {
         exeCase(6, business,"Admin",false);
     }
 
     @Test
-    public void TradeReturnUnAuthTest() throws IOException, NoSuchAlgorithmException {
+    public void tradeReturnUnAuthTest() throws IOException, NoSuchAlgorithmException {
         exeCase(7, business,"Empty",false);
     }
 }

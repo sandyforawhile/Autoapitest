@@ -22,7 +22,7 @@ public class RequestTokenAction {
 
     static byte[] b;
 
-    final static String OAUTH_REQUST_URI = "http://172.16.0.143:8011/oauth/token";
+    final static String OAUTH_REQUEST_URI = "http://172.16.0.143:8011/oauth/token";
 
     public static String getToken(String account) throws NoSuchAlgorithmException, IOException {
 
@@ -49,7 +49,7 @@ public class RequestTokenAction {
         mapResp.put("access_token", null);
         mapResp.put("token_type", null);
 
-        mapResp = HttpUtil.ExeHttpRequestByPost(OAUTH_REQUST_URI,mapHeader,mapParam,mapResp);
+        mapResp = HttpUtil.exeHttpRequestByPost(OAUTH_REQUEST_URI,mapHeader,mapParam,mapResp);
 
         token = mapResp.get("token_type") + " " + mapResp.get("access_token");
 

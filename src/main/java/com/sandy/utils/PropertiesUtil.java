@@ -15,7 +15,7 @@ import java.util.Properties;
 
 public class PropertiesUtil {
 
-    public static Properties PropLoader(String fileName){
+    public static Properties propLoader(String fileName){
 
         Properties prop = new Properties();
 

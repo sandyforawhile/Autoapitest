@@ -17,37 +17,37 @@ public class TradeDetailTest extends BaseTest {
     String business = "tradeDetail";
 
     @Test
-    public void TradeDetailAuthSupplierTest() throws IOException, NoSuchAlgorithmException {
+    public void tradeDetailAuthSupplierTest() throws IOException, NoSuchAlgorithmException {
         exeCase(1, business,"Supplier",true);
     }
 
     @Test
-    public void TradeDetailAuthPurchaserTest() throws IOException, NoSuchAlgorithmException {
+    public void tradeDetailAuthPurchaserTest() throws IOException, NoSuchAlgorithmException {
         exeCase(3, business,"Purchaser",true);
     }
 
     @Test
-    public void TradeDetailAuthAdminTest() throws IOException, NoSuchAlgorithmException {
+    public void tradeDetailAuthAdminTest() throws IOException, NoSuchAlgorithmException {
         exeCase(5, business,"Admin",true);
     }
 
     @Test
-    public void TradeDetailUnAuthSupplierTest() throws IOException, NoSuchAlgorithmException {
+    public void tradeDetailUnAuthSupplierTest() throws IOException, NoSuchAlgorithmException {
         exeCase(2, business,"Supplier",false);
     }
 
     @Test
-    public void TradeDetailUnAuthPurchaserTest() throws IOException, NoSuchAlgorithmException {
+    public void tradeDetailUnAuthPurchaserTest() throws IOException, NoSuchAlgorithmException {
         exeCase(4, business,"Purchaser",false);
     }
 
     @Test
-    public void TradeDetailUnAuthAdminTest() throws IOException, NoSuchAlgorithmException {
+    public void tradeDetailUnAuthAdminTest() throws IOException, NoSuchAlgorithmException {
         exeCase(6, business,"Admin",false);
     }
 
     @Test
-    public void TradeDetailUnAuthTest() throws IOException, NoSuchAlgorithmException {
+    public void tradeDetailUnAuthTest() throws IOException, NoSuchAlgorithmException {
         exeCase(7, business,"Empty",false);
     }
 }

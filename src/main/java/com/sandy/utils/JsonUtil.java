@@ -14,14 +14,14 @@ import java.util.Map;
 
 public class JsonUtil {
 
-    public static Map<String, Object> Json2Map(String jsonstr) {
+    public static Map<String, Object> json2Map(String jsonstr) {
 
         Map<String, Object> map = (Map) JSON.parse(jsonstr);
          return map;
 
     }
 
-    public static String MapToJsonString(Map<String, Object> data) {
+    public static String mapToJsonString(Map<String, Object> data) {
         return JSON.toJSONString(data);
     }
 
