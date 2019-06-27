@@ -1,0 +1,13 @@
+{
+  "areaId": 0,
+  "contactPerson": "string",
+  "contactPhone": "string",
+  "defaultAddress": true,
+  "deliveryAddress": "string",
+  "orderBy": 0,
+  "pageNo": 1,
+  "pageSize": 10,
+  "pageStart": 1,
+  "queryTotal": true,
+  "supplierId": 202306
+}

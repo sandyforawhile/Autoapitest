@@ -1,0 +1,54 @@
+{
+  "abort": true,
+  "auditStatus": 0,
+  "auditVersion": 0,
+  "batchCode": "string",
+  "code": "string",
+  "deliveryFlagBitand": 0,
+  "endOrderDate": "2019-05-16T10:57:39.838Z",
+  "endSkuAmount": 0,
+  "excludeUselessStatus": true,
+  "freezeStatus": 0,
+  "id": 0,
+  "ids": [
+    0
+  ],
+  "includeOrderUser": true,
+  "includeTradeAddress": true,
+  "limit": 0,
+  "orderBy": 0,
+  "orderUserId": 0,
+  "organizationId": 0,
+  "organizationName": "string",
+  "pageNo": 0,
+  "pageSize": 0,
+  "pageStart": 0,
+  "projectName": "string",
+  "queryTotal": true,
+  "sortAsc": "string",
+  "sortField": "string",
+  "sortString": "string",
+  "sorts": [
+    {
+      "orderBy": 0,
+      "sortField": "string"
+    }
+  ],
+  "startOrderDate": "2019-05-16T10:57:39.839Z",
+  "startSkuAmount": 0,
+  "status": 0,
+  "supplierConfirmEndDate": "2019-05-16T10:57:39.839Z",
+  "supplierConfirmStartDate": "2019-05-16T10:57:39.839Z",
+  "supplierId": 0,
+  "supplierName": "string",
+  "sysStatus": 0,
+  "thirdCode": "string",
+  "tradeDetailSearchModel": {
+    "freeze": true,
+    "tradeIds": [
+      0
+    ]
+  },
+  "type": 0,
+  "warehouseType": 0
+}
