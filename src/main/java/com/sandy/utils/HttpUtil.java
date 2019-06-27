@@ -1,8 +1,10 @@
 package com.sandy.utils;
 
 import com.alibaba.fastjson.JSONObject;
+import org.apache.http.HttpHost;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
+import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
@@ -10,6 +12,7 @@ import org.apache.http.client.methods.HttpRequestBase;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
+import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
 import javax.security.auth.login.LoginException;
 import java.io.BufferedReader;
@@ -29,6 +32,11 @@ import java.util.logging.Logger;
  */
 
 public class HttpUtil {
+
+//    public static HttpHost proxy = new HttpHost("127.0.0.1", 8888, "http");
+//    public static RequestConfig defaultRequestConfig = RequestConfig.custom().setProxy(proxy).build();
+//    public static CloseableHttpClient httpClient = HttpClients.custom().setDefaultRequestConfig(defaultRequestConfig).build();
+
 
     public final static String HOST = "http://172.16.0.143:8010";
     public final static String GATEWAY_ROUTE = "/api/order";
@@ -121,16 +129,18 @@ public class HttpUtil {
         try {
             HttpPost httpPost = new HttpPost(URI + domain + "/" + business + "/" + method);
 
+            if (token != null) {
+                mapHeader.put("Authorization", token);
+            }
+
             if (method.equals("export")) {
                 mapHeader.put("Content-Type", "application/x-www-form-urlencoded");
                 mapReqBody = JsonUtil.json2Map(requestbody);
-                HttpUtil.packHttpReqHeader(httpPost, mapHeader);
-                HttpUtil.packHttpReqBody(httpPost, mapReqBody);
+                packHttpReqHeader(httpPost, mapHeader);
+                packHttpReqBody(httpPost, mapReqBody);
             } else {
                 mapHeader.put("Content-Type", "application/json");
-                if (token != null) {
-                    mapHeader.put("Authorization", token);
-                }packHttpReqHeader(httpPost, mapHeader);
+                packHttpReqHeader(httpPost, mapHeader);
                 if (requestbody != null && !requestbody.equals("")) {
                     StringEntity stringEntity = new StringEntity(requestbody);
                     httpPost.setEntity(stringEntity);
