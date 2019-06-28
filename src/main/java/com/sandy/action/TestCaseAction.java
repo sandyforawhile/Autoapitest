@@ -24,7 +24,7 @@ public class TestCaseAction {
         testcases.put(5,"FullRoute_AdminToken_已授权");
         testcases.put(6,"FullRoute_AdminToken_未授权");
         testcases.put(7,"FullRoute_EmptyToken_未授权");
-        testcases.put(8,"FullRoute_CorrectToken_已授权");
+//        testcases.put(8,"FullRoute_CorrectToken_已授权");
 
         return testcases;
     }
