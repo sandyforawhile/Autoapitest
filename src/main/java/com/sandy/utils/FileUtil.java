@@ -22,7 +22,6 @@ public class FileUtil {
     //读取文件
     public static String readFile(String filename){
 
-        int len=0;
         StringBuffer str = new StringBuffer();
         try {
 
@@ -32,15 +31,7 @@ public class FileUtil {
 
                 while( (line=br.readLine())!=null )
                 {
-                    if(len != 0)  // 处理换行符的问题
-                    {
-                        str.append(line);
-                    }
-                    else
-                    {
-                        str.append(line);
-                    }
-                    len++;
+                    str.append(line);
                 }
         } catch (IOException e) {
             e.printStackTrace();
