@@ -119,7 +119,7 @@ public class BaseTest {
     }
 
     @BeforeClass
-    public static void nit() throws IOException {
+    public static void init() throws IOException {
         fileIndex = FileUtil.createFile("report/", "index", "html");
         ReportUtil.packIndex(fileIndex);
     }
